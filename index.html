@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio • CODEFLUX</title>
+  <link rel="stylesheet" href="index.css">
+  <meta name="description" content="Página de portafolio con interfaz de contacto y app bar semi-transparente." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="images/icono_flux.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- App Bar -->
+  <header class="appbar" role="banner" aria-label="Barra superior">
+    <div class="brand" aria-label="Marca">
+      <span class="dot" aria-hidden="true"></span>
+      <span>CodeFlux</span>
+    </div>
+    <nav aria-label="Navegación principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cta" onclick="document.getElementById('nombre').focus()">Hablemos</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div>
+      <span class="badge">Disponible para proyectos • 2025</span>
+      <h1 class="h-title">Diseñador & Desarrollador <span style="background:linear-gradient(135deg, var(--accent), var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent">Front‑End</span></h1>
+      <p class="h-sub">Creo experiencias web modernas, rápidas y accesibles. Escríbeme y construyamos algo increíble juntos.</p>
+      <div class="stats">
+        <div class="stat"><b>3</b><span>Proyectos</span></div>
+        <div class="stat"><b>2 años</b><span>Experiencia</span></div>
+        <div class="stat"><b>100%</b><span>En remoto</span></div>
+      </div>
+    </div>
+    <div class="card contact-card" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="contact-header">
+        <h2 id="contacto-titulo">Contacto directo</h2>
+        <span class="pill">Respuesta en 24h</span>
+      </div>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tu@email.com" autocomplete="email" required />
+          </div>
+        </div>
+        <div>
+          <label for="asunto">Asunto</label>
+          <input id="asunto" name="asunto" type="text" placeholder="¿Sobre qué te gustaría hablar?" required />
+        </div>
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntame brevemente tu idea o proyecto…" required></textarea>
+          <div class="inline-hint">No comparto tu información con nadie. Solo la uso para responderte.</div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          <button class="btn btn-ghost" type="reset">Limpiar</button>
+        </div>
+      </form>
+      <div class="socials" aria-label="Redes sociales">
+        <a class="social" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33V21.88C18.343 21.13 22 16.991 22 12z"/></svg>
+          Facebook
+        </a>
+        <a class="social" href="#" target="_blank" rel="noopener">
+           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+             <path d="M19.615 3.184c-1.232-.329-6.174-.329-6.174-.329s-4.943 0-6.174.329a3.163 3.163 0 0 0-2.232 2.232c-.329 1.232-.329 3.801-.329 3.801s0 2.569.329 3.801a3.163 3.163 0 0 0 2.232 2.232c1.232.329 6.174.329 6.174.329s4.943 0 6.174-.329a3.163 3.163 0 0 0 2.232-2.232c.329-1.232.329-3.801.329-3.801s0-2.569-.329-3.801a3.163 3.163 0 0 0-2.232-2.232zM9.545 14.568V7.432L15.818 11l-6.273 3.568z"/>
+            </svg>
+          YouTube
+        </a>
+        <a class="social" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 2.86 8.15 6.84 9.48.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.44-1.11-1.44-.9-.61.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.32 1.08 2.88.82.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.02A9.57 9.57 0 0 1 12 6.8c.85 0 1.71.11 2.51.32 1.9-1.29 2.74-1.02 2.74-1.02.56 1.39.22 2.42.11 2.67.64.69 1.03 1.58 1.03 2.68 0 3.83-2.34 4.68-4.57 4.93.36.31.67.93.67 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.17.58.67.48A9.98 9.98 0 0 0 22 12c0-5.5-4.46-9.96-9.99-9.96z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secciones de ejemplo -->
+  <section id="proyectos" style="max-width:1100px; margin:0 auto; padding:20px 24px 0">
+    <h2 style="margin:0 0 10px">Proyectos destacados</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px">
+      <div class="card">
+        <h3 style="margin-top:0">StreamZone</h3>
+        <p class="h-sub">StreanZone es una plataforma innovadora dedicada a la venta de servicios de streaming, ofreciendo a los usuarios acceso a múltiples plataformas en un solo lugar. Su objetivo es simplificar la experiencia de entretenimiento digital, brindando opciones accesibles, seguras y adaptadas a las necesidades de cada cliente.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">LuciMapps</h3>
+        <p class="h-sub">LuciMapps es una app hecha en Flutter, con integración de mapas, rutas dinámicas, paneles interactivos, tutorial guiado, pantalla de bienvenida y juegos educativos. Se creó poco a poco, combinando tus ideas y mi ayuda en código y diseño.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Mecatronica</h3>
+        <p class="h-sub">Desarrollé un dispositivo mecatrónico capaz de medir el nivel de un estanque y enviar los datos a una app, mostrando en tiempo real la altura del agua. También he trabajado en otros proyectos de automatización que integran electrónica, sensores y software para soluciones prácticas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" style="max-width:1100px; margin:0 auto; padding:26px 24px">
+    <h2 style="margin:0 0 10px">Sobre mí</h2>
+    <p class="h-sub">Soy desarrollador frontend con experiencia en la creación de páginas web modernas, enfocadas en ofrecer interfaces limpias, funcionales y fáciles de usar. Me especializo en el desarrollo con React y Tailwind CSS, aprovechando estas tecnologías para construir proyectos escalables, dinámicos y visualmente atractivos. Me apasiona optimizar el rendimiento web, asegurando que cada sitio cargue rápido y ofrezca una experiencia fluida a los usuarios. Además, aplico buenas prácticas de accesibilidad, con el objetivo de que cada proyecto pueda ser utilizado por cualquier persona sin barreras. Disfruto mantenerme actualizado con las últimas tendencias del desarrollo frontend y aportar soluciones creativas que logren un equilibrio entre diseño, usabilidad y tecnología.</p>
+     <a href="sobre_nosotros.html" class="btn btn-primary" type="submit">Conoce Mas</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="brand"><span class="dot" aria-hidden="true"></span><span>CodeFlux</span></div>
+    <div class="links">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </footer>
+
+  <!-- Toast de confirmación -->
+  <div id="toast" class="toast" role="status" aria-live="polite">¡Gracias! Tu mensaje fue enviado (demo).</div>
+
+   <script>
+    // Scroll suave para anclas
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if(target){  target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      })
+    })
+
+    
+   </script>
+
+   <script>
+  const form = document.getElementById('contactForm');
+  const toast = document.getElementById('toast');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // evita recarga
+
+    const data = new FormData(form);
+    const values = Object.fromEntries(data.entries());
+
+    // Validación básica
+    if(!values.nombre || !values.email || !values.asunto || !values.mensaje){
+      showToast('Por favor completa todos los campos.');
+      return;
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)){
+      showToast('Ingresa un email válido.');
+      return;
+    }
+
+    try {
+      let res = await fetch("https://formspree.io/f/mrbazylz", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if(res.ok){
+        showToast("¡Gracias! Tu mensaje fue enviado.");
+        form.reset();
+      } else {
+        showToast("Error al enviar. Intenta más tarde.");
+      }
+    } catch (err) {
+      showToast("Error de conexión.");
+    }
+  });
+
+  function showToast(text){
+    toast.textContent = text;
+    toast.classList.add('show');
+    setTimeout(()=> toast.classList.remove('show'), 3000);
+  }
+</script>
+
+  
+</body>
+</html>

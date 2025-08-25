@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio • CODEFLUX</title>
+  <link rel="icon" type="image/x-icon" href="images/icono_flux.png">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #22d3ee;
+      --accent-2: #34d399;
+      --ring: rgba(34, 211, 238, 0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial;
+      background: radial-gradient(1200px 800px at 10% 0%, rgba(34,211,238,.08), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(52,211,153,.08), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 1.2rem; }
+    .brand { display: flex; gap: .6rem; align-items: center; font-weight: 700; }
+    .brand-badge { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(45deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 6px rgba(34,211,238,0.15); }
+
+    nav a {
+      text-decoration: none;
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .9rem;
+      transition: all .3s ease;
+    }
+    nav a:hover { background: var(--accent); color: #0f172a; }
+
+    .hero { text-align: center; padding: 3.5rem 1rem 2rem; animation: fadeUp 1s ease-out; }
+    .title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .6rem; }
+    .subtitle { color: var(--muted); max-width: 52ch; margin: 0 auto; }
+
+    /* SECCIONES */
+    section { margin-top: 3rem; }
+
+    .grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+      border: 1px solid rgba(148,163,184,0.15);
+      border-radius: 18px; padding: 1.5rem; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+
+    /* SOBRE MÍ */
+    .about { text-align: center; }
+    .about img {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 3px solid var(--accent); margin-bottom: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* PROYECTOS */
+    .projects-grid { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .projects-grid { grid-template-columns: repeat(3, 1fr); } }
+    .project-card { text-align: center; }
+    .project-card img {
+      width: 100px; border-radius: 12px; margin-bottom: .7rem;
+      transition: transform .4s ease;
+    }
+    .project-card img:hover { transform: scale(1.05); }
+
+    /* BOTONES */
+    .btn {
+      display: inline-block; text-decoration: none; color: #0b1324;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      padding: .8rem 1.2rem; border-radius: 12px; font-weight: 700;
+      transition: all .3s ease;
+    }
+    .btn:hover { opacity: .9; transform: translateY(-3px); }
+
+    footer { text-align: center; padding: 1rem; margin-top: 3rem; color: var(--muted); }
+
+    .tamano-cart{
+      text-align: center;
+    }
+    .tamano-cart img{
+      width: 260px; 
+      border-radius: 12px; margin-bottom: .7rem;
+      transition: transform .4s ease;
+    }
+    /* ANIMACIONES */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand"><span class="brand-badge"></span>CodeFlux</div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <h1 class="title">Hola, soy Desarrollador Web 👋</h1>
+      <p class="subtitle">Construyo sitios modernos, rápidos y atractivos combinando HTML, CSS y JavaScript.</p>
+      <a class="btn" href="#proyectos">Ver mis proyectos</a>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="sobre" class="about card">
+      <img src="images/icono.png" alt="Foto perfil" />
+      <h2>Sobre mí</h2>
+      <p>Soy un apasionado del desarrollo web con experiencia en <strong>frontend y backend</strong>. Me encanta crear experiencias digitales limpias, rápidas y funcionales.</p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Mis Proyectos</h2>
+      <div class="projects-grid">
+        <div class="card tamano-cart">
+          <img  src="images/starzone_logo_2.png" alt="Proyecto 1" />
+          <h3>StreamZone</h3>
+          <p>StreanZone es una plataforma moderna enfocada en la comercialización de servicios de streaming, que permite a los usuarios disfrutar de varias plataformas desde un único espacio. Su propósito es hacer más sencilla la experiencia de entretenimiento digital, ofreciendo alternativas seguras, económicas y personalizadas según las preferencias de cada cliente.</p>
+        </div>
+        <div class="card project-card">
+          <img  src="images/mapa-ico.png" alt="Proyecto 2" />
+          <h3>LuciMapps</h3>
+          <p>LuciMapps es una aplicación desarrollada en Flutter que integra mapas interactivos, rutas personalizadas, paneles dinámicos, un tutorial paso a paso, una pantalla de bienvenida y juegos con fines educativos. Su construcción fue un proceso gradual, resultado de la combinación entre tus ideas y mi apoyo en la programación y el diseño.</p>
+        </div>
+        <div class="card project-card">
+          <img src="images/mecatronica.png" alt="Proyecto 3" />
+          <h3>Mecatronica</h3>
+          <p>Diseñé un dispositivo mecatrónico que mide el nivel de un estanque y envía los datos a una aplicación, permitiendo visualizar en tiempo real la altura del agua. Además, he participado en otros proyectos de automatización que combinan electrónica, sensores y software, orientados a ofrecer soluciones prácticas y funcionales.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>CODEFLUX | © 2025</p>
+  </footer>
+</body>
+</html>
